@@ -27,7 +27,7 @@ public class VolunteerForm {
         while (true) {
             System.out.print("First Name: ");
             String firstName = in.nextLine();
-            System.out.print("Lats Name: ");
+            System.out.print("Last Name: ");
             String lastName = in.nextLine();
             System.out.print("Phone Number: ");
             String phoneNumber = in.nextLine();
@@ -40,12 +40,13 @@ public class VolunteerForm {
             System.out.print("Are you interested in volunteering on the Production Team [Y]es or [N]o: ");
             String production = in.nextLine();
             System.out.print("Are you interested in leading in a Community Group [Y]es or [N]o: ");
-            String community = in.nextLine();
+            String communityGroups = in.nextLine();
             System.out.print("Are you interested in teaching in Children's Ministry [Y]es or [N]o: ");
             String childMinistry = in.nextLine();
             System.out.print("Are you interested in teaching in Student Ministry [Y]es or [N]o: ");
             String studentMinistry = in.nextLine();
-            System.out.print("Are you interested in hearing more information about volunteer opportunities [Y]es or [N]o: ");
+            System.out.print(
+                    "Are you interested in hearing more information about volunteer opportunities [Y]es or [N]o: ");
             String moreInfo = in.nextLine();
             System.out.print("[Q]uit: ");
             String quite = in.nextLine();
@@ -54,9 +55,11 @@ public class VolunteerForm {
                 System.out.println("We'll get back to you as soon as possible.");
                 return null;
             } else {
-                return new Volunteer(firstName, lastName, emailAddress, phoneNumber, worship, welcome, production, community, childMinistry, studentMinistry, moreInfo);
+                return new Volunteer(firstName, lastName, emailAddress, phoneNumber, worship, welcome, production,
+                        communityGroups, childMinistry, studentMinistry, moreInfo);
             }
         }
+    }
 
     public static ArrayList<Volunteer> loadForm() {
         try {

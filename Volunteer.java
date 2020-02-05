@@ -7,11 +7,13 @@ public class Volunteer implements Serializable {
     String phoneNumber;
     String emailAddress;
     String worship;
+    String welcome;
     String production;
     String communityGroups;
     String childMinistry;
     String studentMinistry;
     String moreInformation;
+    String fullName;
 
     public Volunteer(String firstName, String lastName, String phoneNumber, String emailAddress, String worship,
             String welcome, String production, String communityGroups, String childMinistry, String studentMinistry,
@@ -21,10 +23,12 @@ public class Volunteer implements Serializable {
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
         this.worship = worship;
+        this.welcome = welcome;
         this.production = production;
         this.communityGroups = communityGroups;
         this.childMinistry = childMinistry;
         this.studentMinistry = studentMinistry;
         this.moreInformation = moreInformation;
+        this.fullName = firstName + lastName;
     }
 }
